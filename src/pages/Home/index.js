@@ -8,7 +8,7 @@ import {getFirestore, getDocs, collection} from 'firebase/firestore'
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-export default function Home() {
+export default function Home({item}) {
   const [restaurante, setRestaurante] = useState([])
   const db = getFirestore(app);
   
@@ -35,9 +35,9 @@ export default function Home() {
           data={restaurante}
           renderItem={({item}) => {
             return(
-              <TouchableOpacity style={styles.card} onPress={()=>navigation.push('Detalhes',
+              <TouchableOpacity style={styles.card} onPress={()=>navigation.push('detalhes',
               {
-                restaurante:item
+                restauranteDetail:item
               })}>
                 <View style={styles.content}>
                   <Image
