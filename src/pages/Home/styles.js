@@ -5,8 +5,8 @@ const styles = StyleSheet.create({
     width: 340,
     backgroundColor: 'white',
     alignSelf: 'center',
-    marginBottom: 15,
-    borderRadius: 3,
+    marginBottom: 10,
+    borderRadius: 5,
   },
   content: {
     flex: 1,

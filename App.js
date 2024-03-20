@@ -1,8 +1,12 @@
-import Routes from "./src/routes";
+import { NavigationContainer } from "@react-navigation/native";
+import TabRoutes from "./src/routes/tab.routes";
 
 export default function App() {
   return (
-    <Routes/>
-    
+    <>
+      <NavigationContainer>
+        <TabRoutes/>
+      </NavigationContainer>
+    </>
   );
 }

@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet} from 'react-native';
 import logo from '../../../assets/reveat-logo.png'
 
 export default function Header() {
@@ -12,7 +12,9 @@ export default function Header() {
 const styles = StyleSheet.create({
     container: {
         paddingLeft: 10,
-        paddingBottom: 5,
+        paddingBottom: 10,
+        paddingTop: 5,
+        marginBottom: 0
     },
     logo: {
         width: 40,
