@@ -51,6 +51,7 @@ export default function Home({item}) {
                       </View>
                       <Text style={styles.categoria}>{item.categoria}</Text>
                       <Text>{item.endereco}</Text>
+                      <Text style={{display: 'none'}}>{item.descricao}</Text>
                   </View>
                 </View>
               </TouchableOpacity>
