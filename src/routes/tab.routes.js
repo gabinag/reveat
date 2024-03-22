@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {Feather} from '@expo/vector-icons';
 
-import Avaliar from '../pages/Avaliar';
+import Reviews from '../pages/Reviews';
 import Salvos from '../pages/Salvos';
 import Perfil from '../pages/Perfil';
 import HomeStackNavigation from "./HomeStackNavigation";
@@ -20,11 +20,11 @@ export default function TabRoutes() {
                 }}
             />
             <Tab.Screen 
-                name="avaliar"
-                component={Avaliar}
+                name="reviews"
+                component={Reviews}
                 options={{
                     tabBarIcon: ({color, size}) => <Feather name="star" color={color} size={size}/>,
-                    tabBarLabel: 'Avaliar'
+                    tabBarLabel: 'Reviews'
                 }}
             />
             <Tab.Screen

@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-    paddingBottom: 5
+    paddingBottom: 5,
+    width: '140%'
   },
   img: {
     height: 70,
@@ -28,11 +29,15 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 16,
     fontWeight: '500',
-    paddingRight: 10
+    paddingRight: 15
   },
   categoria: {
     color: '#FF6347',
     fontWeight: '500'
+  },
+  bookmark: {
+    position: 'absolute',
+    right: 0
   }
 });
 

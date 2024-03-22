@@ -1,10 +1,10 @@
-import { Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { View, Text } from 'react-native'
+import React from 'react'
 
-export default function App() {
+export default function Avaliar() {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <Text>Avaliar</Text>
-    </SafeAreaView>
-  );
+    <View>
+      
+    </View>
+  )
 }

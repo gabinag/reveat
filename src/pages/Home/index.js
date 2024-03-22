@@ -7,6 +7,7 @@ import {app} from '../../config/firebaseConfig'
 import {getFirestore, getDocs, collection} from 'firebase/firestore'
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import BotaoAvaliar from '../../components/BotaoAvaliar';
 
 export default function Home({item}) {
   const [restaurante, setRestaurante] = useState([])
@@ -28,7 +29,7 @@ export default function Home({item}) {
   const navigation=useNavigation();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{height: '100%'}}>
       <Header/>
         <FlatList 
           showsVerticalScrollIndicator={false}
@@ -47,7 +48,9 @@ export default function Home({item}) {
                   <View style={styles.container}>
                       <View style={styles.row}>
                           <Text style={styles.titulo}>{item.nome}</Text>
-                          <Text><FontAwesome name="star" size={20} color="orange" />{item.avaliacao}</Text>
+                          <FontAwesome name="star" size={20} color="orange" />
+                          <Text>{item.avaliacao}</Text>
+                          <FontAwesome name="bookmark-o" size={24} color="#FF6347" style={styles.bookmark}/>
                       </View>
                       <Text style={styles.categoria}>{item.categoria}</Text>
                       <Text>{item.endereco}</Text>
@@ -58,6 +61,7 @@ export default function Home({item}) {
             )
           }}
         />
+        <BotaoAvaliar/>
     </SafeAreaView>
   );
 }
