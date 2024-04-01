@@ -1,12 +1,10 @@
 import { Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import BotaoAvaliar from '../../components/BotaoAvaliar';
 
 export default function Reviews() {
   return (
-    <SafeAreaView>
+    <View>
       <Text>reviews</Text>
-      <BotaoAvaliar/>
-    </SafeAreaView>
+    </View>
   );
 }

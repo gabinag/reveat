@@ -49,7 +49,7 @@ export default function Home({item}) {
                       <View style={styles.row}>
                           <Text style={styles.titulo}>{item.nome}</Text>
                           <FontAwesome name="star" size={20} color="orange" />
-                          <Text>{item.avaliacao}</Text>
+                          <Text style={styles.avaliacao}>{item.avaliacao}</Text>
                           <FontAwesome name="bookmark-o" size={24} color="#FF6347" style={styles.bookmark}/>
                       </View>
                       <Text style={styles.categoria}>{item.categoria}</Text>

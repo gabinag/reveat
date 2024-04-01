@@ -8,7 +8,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import {styles} from './styles';
 import BotaoAvaliar from '../../components/BotaoAvaliar';
 
-export default function Detalhes() {
+export default function Detalhes({navigation}) {
   const {params}=useRoute();
   const[restauranteDetail, setRestauranteDetail]=useState([]);
 
@@ -16,7 +16,6 @@ export default function Detalhes() {
     params&&setRestauranteDetail(params.restauranteDetail);
   }, [params])
 
-  const navigation=useNavigation();
   return (
     <SafeAreaView>
       <View style={styles.header}>
@@ -29,11 +28,14 @@ export default function Detalhes() {
       <View style={styles.mainInfo}>
         <View style={styles.containerInfo}>
           <Text style={[styles.categoria, styles.commonStyle]}>{restauranteDetail.categoria}</Text>
-          <Text>{restauranteDetail.avaliacao}</Text>
+          <View style={styles.containerReview}>
+            <FontAwesome name="star" size={20} color="orange"/>
+            <Text style={styles.avaliacao}>{restauranteDetail.avaliacao} (200)</Text>
+          </View>
         </View>
         <Text style={styles.commonStyle}>{restauranteDetail.descricao}</Text>
         <Text style={styles.endereco}>{restauranteDetail.endereco}</Text>
-        <View style={styles.containerReviewTitle}>
+        <View style={styles.containerReview}>
           <FontAwesome name="star" size={20} color="orange" />
           <Text style={styles.reviewsTitle}>Reviews</Text>
         </View>

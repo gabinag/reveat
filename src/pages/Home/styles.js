@@ -31,13 +31,17 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     paddingRight: 15
   },
+  avaliacao: {
+    paddingLeft: 3,
+    fontSize: 15
+  },
   categoria: {
     color: '#FF6347',
     fontWeight: '500'
   },
   bookmark: {
     position: 'absolute',
-    right: 0
+    right: 0,
   }
 });
 

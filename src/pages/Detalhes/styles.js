@@ -39,11 +39,15 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: '#fff'
   },
+  avaliacao: {
+    fontSize: 16,
+    paddingLeft: 3,
+  },
   endereco: {
     fontWeight: '500',
     paddingTop: 8
   },
-  containerReviewTitle: {
+  containerReview: {
     flexDirection: 'row',
     alignItems: 'center'
   },

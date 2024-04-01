@@ -1,6 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {Feather} from '@expo/vector-icons';
-
 import Reviews from '../pages/Reviews';
 import Salvos from '../pages/Salvos';
 import Perfil from '../pages/Perfil';
@@ -10,37 +9,41 @@ const Tab = createBottomTabNavigator();
 
 export default function TabRoutes() {
     return (
-        <Tab.Navigator screenOptions={{headerShown: false}}>
+        <Tab.Navigator>
             <Tab.Screen 
                 name="homestack"
                 component={HomeStackNavigation}
                 options={{
                     tabBarIcon: ({color, size}) => <Feather name="home" color={color} size={size}/>,
-                    tabBarLabel: 'Início'
+                    tabBarLabel: 'Início',
+                    headerShown: false
                 }}
             />
             <Tab.Screen 
-                name="reviews"
+                name="Reviews Populares"
                 component={Reviews}
                 options={{
                     tabBarIcon: ({color, size}) => <Feather name="star" color={color} size={size}/>,
-                    tabBarLabel: 'Reviews'
+                    tabBarLabel: 'Reviews',
+                    headerTintColor: 'orange'
                 }}
             />
             <Tab.Screen
-                name="salvos"
+                name="Salvos"
                 component={Salvos}
                 options={{
                     tabBarIcon: ({color, size}) => <Feather name="bookmark" color={color} size={size}/>,
-                    tabBarLabel: 'Salvos'
+                    tabBarLabel: 'Salvos',
+                    headerTintColor: 'orange'
                 }}
             />
             <Tab.Screen
-                name="perfil"
+                name="Perfil"
                 component={Perfil}
                 options={{
                     tabBarIcon: ({color, size}) => <Feather name="user" color={color} size={size}/>,
-                    tabBarLabel: 'Perfil'
+                    tabBarLabel: 'Perfil',
+                    headerTintColor: 'orange'
                 }}
             />
         </Tab.Navigator>
